@@ -1,0 +1,33 @@
+.canvas{
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.cell{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*width: 100px;*/
+    /*height: 100px;*/
+}
+.row0 {
+    top: 0%;
+}
+.row1 {
+    top: 33%;
+}
+.row2 {
+    top: 66%;
+}
+
+.col0 {
+    left: 0%;
+}
+.col1 {
+    left: 33%;
+}
+.col2 {
+    left: 66%;
+}
