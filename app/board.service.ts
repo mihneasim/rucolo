@@ -23,4 +23,36 @@ export class BoardService {
 
         this.cells = seed;
     }
+
+    barrelRow(row: number, direction: number) {
+        var temp: Colors;
+        var start = row * 3;
+        if (direction === -1) {
+            temp = this.cells[start];
+            this.cells[start] = this.cells[start + 1];
+            this.cells[start + 1] = this.cells[start + 2];
+            this.cells[start + 2] = temp;
+        } else if (direction === 1) {
+            temp = this.cells[start + 2];
+            this.cells[start + 2] = this.cells[start + 1];
+            this.cells[start + 1] = this.cells[start];
+            this.cells[start] = temp;
+        }
+    }
+
+    barrelCol(col: number, direction: number) {
+        var temp: Colors;
+        if (direction === -1) {
+            temp = this.cells[col];
+            this.cells[col] = this.cells[col + 3];
+            this.cells[col + 3] = this.cells[col + 6];
+            this.cells[col + 6] = temp;
+        } else if (direction === 1) {
+            temp = this.cells[col + 6];
+            this.cells[col + 6] = this.cells[col + 3];
+            this.cells[col + 3] = this.cells[col];
+            this.cells[col] = temp;
+        }
+    }
+
 }

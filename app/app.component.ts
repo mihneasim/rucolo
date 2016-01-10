@@ -13,7 +13,13 @@ import {BoardService,Colors} from './board.service';
             {{cell}}
         </div>
     </div>
-    <a href="#">Shift </a>
+    <button (click)="barrelRow(0, 1)" href="#">barrel 1st row</button>
+    <button (click)="barrelRow(1, 1)" href="#">barrel 2nd row</button>
+    <button (click)="barrelRow(2, 1)" href="#">barrel 3rd row</button>
+
+    <button (click)="barrelCol(0, 1)" href="#">barrel 1st col</button>
+    <button (click)="barrelCol(1, 1)" href="#">barrel 2nd col</button>
+    <button (click)="barrelCol(2, 1)" href="#">barrel 3rd col</button>
     `,
     styleUrls: ['app/app.styles.css'],
     providers: [BoardService]
@@ -27,5 +33,13 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this._boardService.randomize();
         this.cells = this._boardService.cells;
+    }
+
+    barrelRow(row: number, direction: number) {
+        this._boardService.barrelRow(row, direction);
+    }
+
+    barrelCol(col: number, direction: number) {
+        this._boardService.barrelCol(col, direction);
     }
 }
