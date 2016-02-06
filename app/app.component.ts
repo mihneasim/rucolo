@@ -9,7 +9,7 @@ import {BoardService,Colors} from './board.service';
 
     <div class="canvas">
         <div *ngFor="#cell of cells; #i = index"
-            id="cell{{i}}" [ngClass]="['cell', 'row' + floor(i/3), 'col' + i%3]">
+            id="cell{{i}}" [ngClass]="['cell', 'row' + floor(i/3), 'col' + i%3, 'val' + cell]">
             {{cell}}
         </div>
     </div>
