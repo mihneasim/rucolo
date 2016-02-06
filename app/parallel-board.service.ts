@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Board, Colors} from 'board.interface';
+import {Board, Colors} from './board.interface';
 
 @Injectable()
 export class ParallelBoardService implements Board {
