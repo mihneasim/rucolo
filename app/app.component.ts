@@ -1,5 +1,6 @@
 import {Component,OnInit} from 'angular2/core';
-import {BoardService,Colors} from './board.service';
+import {BoardService} from './board.service';
+import {Colors} from './board.interface';
 
 @Component({
     selector: 'my-app',
